@@ -1,0 +1,17 @@
+#comment_watcher {
+  position: fixed;
+  right: 25px;
+  bottom: 0px;
+  background-color: white;
+  display: none;
+  border: 2px solid #eee;
+  font-size: 10px;
+  width: 200px;
+  padding: 3px;
+}
+
+.new_comment blockquote{
+  font-size: 12px;
+  padding-left: 10px;
+  margin-left: 2px;
+}

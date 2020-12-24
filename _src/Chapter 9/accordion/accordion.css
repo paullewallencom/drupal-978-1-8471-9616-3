@@ -1,0 +1,16 @@
+/*
+ * Accordion module CSS.
+ */
+
+.ui-accordion div.block {
+  background-color: #efefef;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+h2.ui-accordion-header {
+  border: 1px solid black;
+  background-color: #6699CC;
+  color: white;
+  margin-bottom: 0px !IMPORTANT;
+}

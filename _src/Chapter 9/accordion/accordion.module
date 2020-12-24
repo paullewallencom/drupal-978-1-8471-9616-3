@@ -1,0 +1,27 @@
+<?php
+// $Id$
+
+/**
+ * Attach an accordion effect to menus.
+ * @file
+ */
+ 
+/**
+ * Implementation of hook_help().
+ */ 
+function accordion_help($path, $args) {
+  if ($path == 'admin/help#accordion') {
+    return t('This module adds accordion effects to menus.');
+  }
+}
+ 
+/**
+ * Implementation of hook_init().
+ */
+function accordion_init() {
+  $path = drupal_get_path('module', 'accordion');
+  drupal_add_css($path . '/accordion.css');
+  drupal_add_js($path . '/accordion.js');
+  drupal_add_js($path . '/ui/ui.core.js');
+  drupal_add_js($path . '/ui/ui.accordion.js');
+}

@@ -1,0 +1,20 @@
+.editor-button {
+  border: 1px solid gray;
+  padding: 3px;
+  text-align: center;
+  background-color: #eee;
+  float: left;
+}
+
+.editor-button:hover {
+  background-color: #ccc;
+}
+
+.button-bar {
+  clear: both;
+  height: 2em;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}

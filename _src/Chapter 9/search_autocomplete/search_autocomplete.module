@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Provide autocomplete functionality to Drupal search.
+ * @file
+ */
+
+/**
+ * Implementation of hook_help().
+ */
+function search_autocomplete_help($path) {
+  if ($path == 'admin/help#search_autocomplete') {
+    return t('Provide autocompletion to Drupal search.');
+  }
+}
+
+/**
+ * Implementation of hook_init().
+ */
+function search_autocomplete_init() {
+  $path = drupal_get_path('module', 'search_autocomplete');
+  
+  // The Taxonomy ID.
+  $tid = 1;
+  
+  $autocomplete_uri = url('taxonomy/autocomplete/' . $tid);
+  $inline = 'SearchAutocomplete.url = "' .
+    $autocomplete_uri . '";';
+  
+  drupal_add_js($inline, 'inline');
+  drupal_add_js('misc/autocomplete.js');
+  drupal_add_js($path . '/search_autocomplete.js');
+}

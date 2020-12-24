@@ -1,0 +1,8 @@
+; $Id$
+name = Frobnitz
+description = Table-based multi-column theme with JavaScript enhancements.
+version = 1.0
+core = 6.x
+base theme = bluemarine
+stylesheets[all][] = frobnitz.css
+scripts[] = printer_tool.js

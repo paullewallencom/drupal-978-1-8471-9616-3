@@ -1,0 +1,27 @@
+<?php
+// $Id$
+
+/**
+ * A module to load JS files. 
+ */
+ 
+/**
+ * Implementation of hook_help().
+ */
+function jsloader_help($path, $args) {
+  if ($path == 'admin/help#jsloader') {
+    return t('JS Loader loads JavaScript files based on the contents of the .info file.');
+  }
+}
+
+/**
+ * Implementation of hook_help().
+ */
+function jsloader_init() {
+  $path = drupal_get_path('module', 'jsloader');
+  $info = drupal_parse_info_file($path . '/jsloader.info');
+  foreach ($info['scripts'] as $script) {
+    drupal_add_js($path . '/' . $script);
+  }
+}
+

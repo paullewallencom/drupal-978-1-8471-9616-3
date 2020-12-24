@@ -1,0 +1,9 @@
+#sidebar-left {
+   border-right: 1px solid black;
+}
+
+#printer-button {
+  float: right;
+  font-weight: bold;
+  padding-right: 20px;
+}

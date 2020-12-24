@@ -1,0 +1,6 @@
+; $Id$
+name = JS Loader
+description = "Load JavaScript files"
+core = 6.x
+scripts[] = jsloader.js
+scripts[] = jquery.divwrap.js

@@ -1,0 +1,5 @@
+; $Id$
+name = Search Autocomplete
+description = Provide autocompletion for search fields
+dependencies[] = search
+core = 6.x

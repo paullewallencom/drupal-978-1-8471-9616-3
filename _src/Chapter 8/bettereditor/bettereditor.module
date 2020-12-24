@@ -1,0 +1,64 @@
+<?php
+// $Id$
+
+/**
+ * A better version of the simple editor.
+ * @file
+ */
+ 
+/**
+ * Implementation of hook_help().
+ */
+function bettereditor_help($path, $args) {
+  if($path == 'admin/help#bettereditor') {
+    return t('This module provides a JavaScript based text editor.');
+  }
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function bettereditor_init() {
+  $buttons = array();
+  $buttons[] = array(
+    'name' => 'B',
+    'tag' => 'strong',
+    'style' => 'font-weight: bold',
+  );
+  $buttons[] = array(
+    'name' => 'I',
+    'tag' => 'em',
+    'style' => 'font-style: italic',
+  );
+  $buttons[] = array(
+    'name' => 'S',
+    'tag' => 'del',
+    'cssClass' => 'strikethrough',
+    'style' => 'text-decoration: line-through',
+  );
+  $buttons[] = array(
+    'name' => 'ul',
+    'tag' => array('ul', 'li'),
+  );
+  $buttons[] = array(
+    'name' => 'ol',
+    'tag' => array('ol', 'li'),
+  );
+  $buttons[] = array(
+    'name' => 'li',
+    'tag' => 'li',
+  );
+  $buttons[] = array(
+    'name' => 'table',
+    'tag' => array('table', 'tbody', 'tr', 'td'),
+  );
+  
+  $buttonJS = json_encode($buttons);
+  //drupal_add_js(array('buttons' => $buttons), 'setting');
+  $script = 'BetterEditor.buttons = ' . $buttonJS;
+  $path = drupal_get_path('module', 'bettereditor');
+  drupal_add_css($path . '/bettereditor.css');
+  drupal_add_js($path . '/bettereditor.js');
+  drupal_add_js($script, 'inline');
+
+}

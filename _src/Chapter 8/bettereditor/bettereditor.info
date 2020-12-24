@@ -1,0 +1,5 @@
+; $Id$
+name = Better Editor
+description = Provide an simple editor for HTML.
+core = 6.x
+php = 5.2

@@ -1,0 +1,17 @@
+;$Id$
+name = Frobnitz
+description = Table-based multi-column theme with JavaScript enhancements.
+version = 1.0
+core = 6.x
+base theme = bluemarine
+stylesheets[all][] = frobnitz.css
+stylesheets[all][] = simpleeditor.css
+stylesheets[all][] = commentwatcher.css
+scripts[] = printer_tool.js
+scripts[] = sticky_rotate.js
+scripts[] = day.js
+scripts[] = behaviors.js
+scripts[] = simpleeditor.js
+scripts[] = themes.js
+scripts[] = webclips.js
+scripts[] = commentwatcher.js
